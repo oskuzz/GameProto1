@@ -18,9 +18,8 @@ public class Pankki {
     int kokonaisLaina;
     double lainanKorko;
 
-    public Pankki(int kassa, double korko) {
+    public Pankki(int kassa) {
         this.kassa = kassa;
-        this.lainanKorko = korko;
     }
 
     public void toKassa(int maara) {

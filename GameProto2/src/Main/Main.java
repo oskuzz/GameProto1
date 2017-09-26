@@ -10,12 +10,13 @@ package Main;
  * @author osku0
  */
 public class Main extends javax.swing.JFrame {
-
+    Pankki pankki = new Pankki(1000);
     /**
      * Creates new form Main
      */
     public Main() {
         initComponents();
+        Kassa.setText("Kassa: 1000.0€");
     }
 
     /**
@@ -27,21 +28,69 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        Kassa = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        loan100 = new javax.swing.JToggleButton();
+        loan500 = new javax.swing.JToggleButton();
+        loan1k = new javax.swing.JToggleButton();
+        loan5k = new javax.swing.JToggleButton();
+        loan10k = new javax.swing.JToggleButton();
+        loan100k = new javax.swing.JToggleButton();
+
+        jButton1.setText("jButton1");
+
+        jButton2.setText("Laina");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        Kassa.setText("Kassa: 0€");
+        getContentPane().add(Kassa, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, -1, -1));
 
-        pack();
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        loan100.setText("100€");
+        loan100.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loan100ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(loan100, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+
+        loan500.setText("500€");
+        jPanel1.add(loan500, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
+
+        loan1k.setText("1000€");
+        jPanel1.add(loan1k, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
+
+        loan5k.setText("5000€");
+        jPanel1.add(loan5k, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, -1));
+
+        loan10k.setText("10000€");
+        jPanel1.add(loan10k, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, -1, -1));
+
+        loan100k.setText("100000€");
+        jPanel1.add(loan100k, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 450, 60));
+
+        setSize(new java.awt.Dimension(486, 339));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void loan100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loan100ActionPerformed
+        if(loan100.isSelected()) {
+            pankki.setLaina(100);
+            loan100.setText("Maksa 100€");
+            Kassa.setText("Kassa: " + pankki.getKassa() + "€");
+        } else {
+            pankki.toLaina(100);
+            loan100.setText("100€");
+            Kassa.setText("Kassa: " + pankki.getKassa() + "€");
+        }
+    }//GEN-LAST:event_loan100ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +128,15 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Kassa;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JToggleButton loan100;
+    private javax.swing.JToggleButton loan100k;
+    private javax.swing.JToggleButton loan10k;
+    private javax.swing.JToggleButton loan1k;
+    private javax.swing.JToggleButton loan500;
+    private javax.swing.JToggleButton loan5k;
     // End of variables declaration//GEN-END:variables
 }
