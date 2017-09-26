@@ -10,8 +10,8 @@ package Main;
  * @author osku0
  */
 public enum ID {
-    
+
     Player(),
     Enemy();
-    
+
 }
