@@ -12,17 +12,20 @@ package Main;
 public class Main {
 
     public static void main(String[] args) {
-        Pankki pankki = new Pankki(100, 0.1);
+        Pankki pankki = new Pankki(1000000, 0);
+        int luku = 200001;
         System.out.println("Alku kassa: " + pankki.getKassa());
         
-        System.out.println("Lainaa 100");
-        pankki.setLaina(100);
+        System.out.println("Lainaa 1000");
+        pankki.setLaina(luku);
 
         System.out.println("Kassa: " + pankki.getKassa());
         System.out.println("Lainaa Jäljellä: " + pankki.getLainaaJaljella());
         
-        System.out.println("Maksaa lainaa 50");
-        pankki.toLaina(50);
+        System.out.println("Maksaa lainaa 10000");
+        pankki.toLaina(luku);
+        
+        System.out.println("Korko: " + pankki.getKorko());
         
         System.out.println("Kassa: " + pankki.getKassa());
         System.out.println("Lainaa Jäljellä: " + pankki.getLainaaJaljella());
