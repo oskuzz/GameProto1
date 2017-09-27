@@ -12,6 +12,7 @@ package Main;
 public enum ID {
 
     Player(),
-    BasicEnemy();
+    BasicEnemy(),
+    Trail();
 
 }
