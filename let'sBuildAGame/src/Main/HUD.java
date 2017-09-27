@@ -5,13 +5,19 @@
  */
 package Main;
 
+import java.awt.Graphics;
+
 /**
  *
  * @author osku0
  */
-public enum ID {
-
-    Player(),
-    BasicEnemy();
-
+public class HUD {
+    
+    public void tick(){
+        
+    }
+    
+    public void render(Graphics g){
+        
+    }
 }
