@@ -35,8 +35,7 @@ public class Game extends Canvas implements Runnable {
         r = new Random();
 
         handler.addObject(new Player(WIDTH / 2 - 32, HEIGHT / 2 - 32, ID.Player, handler));
-        handler.addObject(new EnemyBoss((Game.WIDTH / 2) - 60, -120, ID.EnemyBoss, handler));
-        //handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), ID.BasicEnemy, handler));
+        handler.addObject(new BasicEnemy(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), ID.BasicEnemy, handler));
 
     }
 
