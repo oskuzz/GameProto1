@@ -39,14 +39,16 @@ public class Handler {
     public void removeObject(GameObject object) {
         this.object.remove(object);
     }
-    
-    public void clearEnemys(){
+
+    public void clearEnemys() {
         for (int i = 0; i < object.size(); i++) {
             GameObject tempObject = object.get(i);
 
-            if(tempObject.getID() == ID.Player){
+            if (tempObject.getID() == ID.Player) {
                 object.clear();
-                addObject(new Player((int)tempObject.getX(),(int)tempObject.getY(), ID.Player, this));
+                if (Game.gameState != Game.STATE.End) {
+                    addObject(new Player((int) tempObject.getX(), (int) tempObject.getY(), ID.Player, this));
+                }
             }
         }
     }
