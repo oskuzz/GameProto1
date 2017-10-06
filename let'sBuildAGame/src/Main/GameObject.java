@@ -63,10 +63,10 @@ public abstract class GameObject {
     }
 
     public float getVelX() {
-        return this.velX;
+        return velX;
     }
 
     public float getVelY() {
-        return this.velY;
+        return velY;
     }
 }
